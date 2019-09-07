@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import {
@@ -36,7 +36,7 @@ export function provideConfig() {
     HomeComponent,
     UserHomeComponent
   ],
-  imports: [BrowserModule, AppRoutes, SocialLoginModule],
+  imports: [BrowserModule, AppRoutes, SocialLoginModule, HttpClientModule],
   providers: [
     {
       provide: AuthServiceConfig,
